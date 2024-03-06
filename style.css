@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.homepage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("./images/pxfuel.jpg");
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.k {
+    overflow-y: scroll;
+    height: 100vh;
+
+}
+
+/* .k::-webkit-scrollbar{
+    display: none;
+} */
+
+nav {
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 7em;
+}
+
+li {
+    margin: 0px 30px;
+    list-style: none;
+    position: relative;
+}
+
+
+.li1::after {
+    transform: scaleX(0);
+}
+
+.li2::after {
+    transform: scaleX(0);
+}
+
+.li3::after {
+    transform: scaleX(0);
+}
+
+.li4::after {
+    transform: scaleX(0);
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-left: 7em;
+    background: url("images/download.jpg");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.content {
+    color: white;
+    padding-top: 15em;
+}
+
+.heading1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+.heading2 {
+    text-align: center;
+    font-size: 4em;
+}
+
+.fixer {
+    display: inline;
+    font-weight: 300;
+
+}
+
+.changer {
+    display: inline;
+    margin-left: 5px;
+}
+
+.mainContent {
+    height: 100vh;
+}
+
+.skillsPage {
+    height: 100vh;
+    /* background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(36, 11, 54, 0.8), rgba(195, 20, 50, 0.9)); */
+    color: white;
+}
+
+.skillsHeading {
+    text-align: center;
+    padding-top: 1.8em;
+    color: white;
+    cursor: default;
+}
+
+.SkillBar {
+    width: 30%;
+    height: 30em;
+    background-color: #000000ab;
+    padding: 0 12px 3em 12px;
+}
+
+.graphBar {
+    width: 30%;
+    height: 30em;
+    background-color: #000000ab;
+}
+
+.flexi {
+    height: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    background-color: #ddd;
+    height: 3px;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fill .8s linear forwards;
+}
+
+.skills {
+    color: white;
+    height: 3px;
+    margin-left: -12px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    background: rebeccapurple;
+    transform-origin: left;
+    animation: fill .8s .8s linear forwards;
+}
+
+@keyframes fill {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 70%;
+}
+
+.js {
+    width: 85%;
+}
+
+.react {
+    width: 80%;
+}
+
+.techHeading {
+    margin-top: 15px;
+    margin-bottom: 1.9em;
+    text-align: center;
+}
+
+.profHeading {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.graph{
+    height: 23em;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.graphSkills{
+    background-color: transparent;
+    text-align: center;
+    width: 9em;
+}
+
+.graphSkills svg{
+    transform: rotate(-90deg);
+}
+
+.progress-bar{
+    stroke-width: 7;
+    stroke: #ddd;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    animation: animate-bar .8s linear forwards;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path{
+    stroke-width: 7;
+    stroke: rebeccapurple;
+    fill: transparent;
+    stroke-dashoffset: 502;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 0.8s 0.8s linear forwards;}
+.path-2{animation: animate-path2 0.8s 0.8s linear forwards;}
+.path-3{animation: animate-path3 0.8s 0.8s linear forwards;}
+.path-4{animation: animate-path4 0.8s 0.8s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+
+.percent{
+    transform: translateY(84px);
+}
+
+.projectContent{
+    height: 80vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects{
+    height: 100vh;
+    /* background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(36, 11, 54, 0.8), rgba(195, 20, 50, 0.9)); */
+}
+
+.projectsItems{
+    height: 200px;
+    width: 26%;
+    z-index: 1;
+    /* cursor: auto; */
+}
+
+.desc{
+    height: 200px;
+    width: 12%;
+    background-color: rgba(102, 51, 153, 0.637);
+    color: white;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.d1{
+    position: relative;
+    right: 13%;
+}
+
+.d2{
+    position: relative; 
+    left: 13%;
+}
+
+.d3{
+    position: relative; 
+    right: 13%;
+}
+
+.d4{
+    position: relative; 
+    left: 13%;
+}
+
+.project1{
+    background: url("images/video-call-app.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+.project1:hover{
+    filter: drop-shadow(10px 15px 10px rgb(184, 102, 116));
+    transform: scale(1.03);
+}
+
+.project2{
+    background: url("images/notebook2-new.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+.project2:hover{
+    filter: drop-shadow(10px 15px 10px rgb(243, 200, 122));
+    transform: scale(1.03);
+}
+
+.project3{
+    background: url("images/snakeGame-new.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+.project3:hover{
+    filter: drop-shadow(10px 15px 10px yellowgreen);
+    transform: scale(1.03);
+}
+
+.project4{
+    background: url("images/proposal-card-new.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+.project4:hover{
+    filter: drop-shadow(10px 15px 10px white);
+    transform: scale(1.03);
+}
